@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Student on vintersnow&#39;s page</title>
+    <link>http://vintersnow.github.io/tags/student/index.xml</link>
+    <description>Recent content in Student on vintersnow&#39;s page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <atom:link href="http://vintersnow.github.io/tags/student/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AWS educationに登録した</title>
+      <link>http://vintersnow.github.io/post/aws_education/</link>
+      <pubDate>Fri, 20 Jan 2017 18:41:07 +0900</pubDate>
+      
+      <guid>http://vintersnow.github.io/post/aws_education/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://education.github.com/pack&#34;&gt; 学生用のディスカウントがこんなにあるとは知らなかった。 &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今回、AWS EducationというAmazon Web Serviceの学生特典に登録してみた。&lt;/p&gt;
+
+&lt;h1 id=&#34;aws-education&#34;&gt;AWS Education&lt;/h1&gt;
+
+&lt;h2 id=&#34;出来ること&#34;&gt;出来ること&lt;/h2&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;http://vintersnow.github.io/static/images/post/aws_education.png&#34; alt=&#34;AWS educationに登録した static/images/post/aws_education.png&#34;&gt;
+  
+&lt;/figure&gt;
+
+
+&lt;p&gt;一番重要なのは100(40)ドルのクレジットだろう。
+加盟校の一覧は&lt;a href=&#34;https://s3.amazonaws.com/awseducate-list/AWS_Educate_Institutions.pdf&#34;&gt;ここ&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;登録&#34;&gt;登録&lt;/h2&gt;
+
+&lt;h3 id=&#34;事前に必要なもの&#34;&gt;事前に必要なもの&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;学校のメールアドレス&lt;/li&gt;
+&lt;li&gt;AWSアカウント&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/jp/education/awseducate/&#34;&gt;https://aws.amazon.com/jp/education/awseducate/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記のリンクから「AWS Educateに今すぐ参加する」をクリック&lt;/p&gt;
+
+&lt;p&gt;あとは流れに沿って埋めていく。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/jp/how-to-find-accountid/&#34;&gt;途中AWSアカウント IDが必要となるがこれはAWSのコンソールで確認可能。&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;登録が成功したらこんなメールが来る。&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;http://vintersnow.github.io/static/images/post/aws_education_mail.png&#34; alt=&#34;AWS educationに登録した static/images/post/aws_education_mail.png&#34;&gt;
+  
+&lt;/figure&gt;
+
+
+&lt;p&gt;Credit Codeというのが書いてあるので、AWSコンソールから&lt;code&gt;アカウント&lt;/code&gt;-&amp;gt;&lt;code&gt;クレジット&lt;/code&gt;に進みプロモーションコードを入力すればクレジットがもらえる。&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;http://vintersnow.github.io/static/images/post/aws_education_credit.png&#34; alt=&#34;AWS educationに登録した static/images/post/aws_education_credit.png&#34;&gt;
+  
+&lt;/figure&gt;
+
+
+&lt;p&gt;使い過ぎて料金を請求されないように注意しよう。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

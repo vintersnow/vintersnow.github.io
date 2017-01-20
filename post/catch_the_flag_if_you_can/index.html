@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="theme-color" content="#263238">
+
+<meta name="generator" content="Hugo 0.18.1" />
+
+<link rel="apple-touch-icon" href="http://vintersnow.github.io/images/logo.png">
+
+
+<link rel="canonical" href="http://vintersnow.github.io/post/catch_the_flag_if_you_can/">
+
+
+    
+    <link href="http://fonts.googleapis.com/css?family=Open&#43;Sans:400,400italic,600,600italic,700,700italic" rel="stylesheet">
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Catch the Flag if You Can - vintersnow&#39;s page</title>
+    
+<meta name="description" content="TL;DR この記事はeeic Adevent Calendar 2016 その２の１１日目です。これはCTF歴数ヶ月のトーシロがCTFを知らない人に対して説明をする（ことを試みた）記事です。 以下の構成となっています。 第一部: CTFについて 第二部: はじめてのバイナリ解析 第三部: SECCON2016 write up  この記事は第一部です。（長くなったので分割しました。）CTFとは&amp;rdquo;Capture The Flag&amp;rdquo;の略で、隠されたフラッグと呼ばれるものを何かしらの方法で習得するゲームです。IT技術を使った謎解き、プログラミング、ハッキングなどの言葉を聞いて興味を惹かれた人読んでみると良いかもしれません。「ハッキングとか倫理に反する！」と思う方やウィザードの方はブラウザを閉じることをおすすめます。また時間の無い方も踏み入れないほうがいいかもしれません&amp;hellip; 気がつくと時間が解けていきます。&amp;hellip;.......................................................................... :::: ##:::::&#39;##:&#39;########:&#39;##::::::::&#39;######:::&#39;#######::&#39;##::::&#39;##:::: :::: ##:&#39;##: ##: ##.....:: ##:::::::&#39;##... ##:&#39;##.... ##: ###::&#39;###:::: :::: ##: ##: ##: ##::::::: ##::::::: ##:::..:: ##:::: ##: ####&#39;####:::: :::: ##: ##: ##: ######::: ##::::::: ##::::::: ##:::: ##: ## ### ##:::: :::: ##: ##: ##: ##...:::: ##::::::: ##::::::: ##:::: ##: ##.">
+
+<meta property="og:title" content="Catch the Flag if You Can - vintersnow&#39;s page">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://vintersnow.github.io/post/catch_the_flag_if_you_can/">
+<meta property="og:image" content="http://vintersnow.github.io/images/geek/ctf.jpg">
+<meta property="og:site_name" content="vintersnow&#39;s page">
+<meta property="og:description" content="TL;DR この記事はeeic Adevent Calendar 2016 その２の１１日目です。これはCTF歴数ヶ月のトーシロがCTFを知らない人に対して説明をする（ことを試みた）記事です。 以下の構成となっています。 第一部: CTFについて 第二部: はじめてのバイナリ解析 第三部: SECCON2016 write up  この記事は第一部です。（長くなったので分割しました。）CTFとは&amp;rdquo;Capture The Flag&amp;rdquo;の略で、隠されたフラッグと呼ばれるものを何かしらの方法で習得するゲームです。IT技術を使った謎解き、プログラミング、ハッキングなどの言葉を聞いて興味を惹かれた人読んでみると良いかもしれません。「ハッキングとか倫理に反する！」と思う方やウィザードの方はブラウザを閉じることをおすすめます。また時間の無い方も踏み入れないほうがいいかもしれません&amp;hellip; 気がつくと時間が解けていきます。&amp;hellip;.......................................................................... :::: ##:::::&#39;##:&#39;########:&#39;##::::::::&#39;######:::&#39;#######::&#39;##::::&#39;##:::: :::: ##:&#39;##: ##: ##.....:: ##:::::::&#39;##... ##:&#39;##.... ##: ###::&#39;###:::: :::: ##: ##: ##: ##::::::: ##::::::: ##:::..:: ##:::: ##: ####&#39;####:::: :::: ##: ##: ##: ######::: ##::::::: ##::::::: ##:::: ##: ## ### ##:::: :::: ##: ##: ##: ##...:::: ##::::::: ##::::::: ##:::: ##: ##.">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="vintersnow&#39;s page">
+<meta name="twitter:url" content="http://vintersnow.github.io/post/catch_the_flag_if_you_can/">
+<meta name="twitter:title" content="Catch the Flag if You Can - vintersnow&#39;s page">
+<meta name="twitter:description" content="TL;DR この記事はeeic Adevent Calendar 2016 その２の１１日目です。これはCTF歴数ヶ月のトーシロがCTFを知らない人に対して説明をする（ことを試みた）記事です。 以下の構成となっています。 第一部: CTFについて 第二部: はじめてのバイナリ解析 第三部: SECCON2016 write up  この記事は第一部です。（長くなったので分割しました。）CTFとは&amp;rdquo;Capture The Flag&amp;rdquo;の略で、隠されたフラッグと呼ばれるものを何かしらの方法で習得するゲームです。IT技術を使った謎解き、プログラミング、ハッキングなどの言葉を聞いて興味を惹かれた人読んでみると良いかもしれません。「ハッキングとか倫理に反する！」と思う方やウィザードの方はブラウザを閉じることをおすすめます。また時間の無い方も踏み入れないほうがいいかもしれません&amp;hellip; 気がつくと時間が解けていきます。&amp;hellip;.......................................................................... :::: ##:::::&#39;##:&#39;########:&#39;##::::::::&#39;######:::&#39;#######::&#39;##::::&#39;##:::: :::: ##:&#39;##: ##: ##.....:: ##:::::::&#39;##... ##:&#39;##.... ##: ###::&#39;###:::: :::: ##: ##: ##: ##::::::: ##::::::: ##:::..:: ##:::: ##: ####&#39;####:::: :::: ##: ##: ##: ######::: ##::::::: ##::::::: ##:::: ##: ## ### ##:::: :::: ##: ##: ##: ##...:::: ##::::::: ##::::::: ##:::: ##: ##.">
+<meta name="twitter:image" content="http://vintersnow.github.io/images/geek/ctf.jpg">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"http:\/\/vintersnow.github.io\/"
+    },
+    "headline": "Catch the Flag if You Can - vintersnow\x27s page",
+    "image": {
+      "@type": "ImageObject",
+      "url": "http:\/\/vintersnow.github.io\/images\/geek\/ctf.jpg",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2016-12-12T12:52:43JST",
+    "dateModified": "2016-12-12T12:52:43JST",
+    "author": {
+      "@type": "Person",
+      "name": "vintersnow\x27s page"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "vintersnow\x27s page",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http:\/\/vintersnow.github.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "TL;DR この記事はeeic Adevent Calendar 2016 その２の１１日目です。\nこれはCTF歴数ヶ月のトーシロがCTFを知らない人に対して説明をする（ことを試みた）記事です。 以下の構成となっています。\n 第一部: CTFについて 第二部: はじめてのバイナリ解析 第三部: SECCON2016 write up  この記事は第一部です。（長くなったので分割しました。）\nCTFとは\x26rdquo;Capture The Flag\x26rdquo;の略で、隠されたフラッグと呼ばれるものを何かしらの方法で習得するゲームです。\nIT技術を使った謎解き、プログラミング、ハッキングなどの言葉を聞いて興味を惹かれた人読んでみると良いかもしれません。\n「ハッキングとか倫理に反する！」と思う方やウィザードの方はブラウザを閉じることをおすすめます。\nまた時間の無い方も踏み入れないほうがいいかもしれません\x26hellip; 気がつくと時間が解けていきます。\n\x26hellip;\n..\n.\n....................................................................... :::: ##:::::\x27##:\x27########:\x27##::::::::\x27######:::\x27#######::\x27##::::\x27##:::: :::: ##:\x27##: ##: ##.....:: ##:::::::\x27##... ##:\x27##.... ##: ###::\x27###:::: :::: ##: ##: ##: ##::::::: ##::::::: ##:::..:: ##:::: ##: ####\x27####:::: :::: ##: ##: ##: ######::: ##::::::: ##::::::: ##:::: ##: ## ### ##:::: :::: ##: ##: ##: ##...:::: ##::::::: ##::::::: ##:::: ##: ##."
+  }
+</script>
+
+
+    <style>
+      html { font-size: 18px;}@media (max-width: 768px) { html { font-size: 15px; }}body { font-family: 'Noto Sans','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,sans-serif; font-size: inherit; font-weight: 300; line-height: 1rem; background-color: #eceff1;}p { margin: 0;}a { color: #4caf50;}a:hover { text-decoration: none; color: #388e3c;}ul,ol { margin: 0; padding: 0;}h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: 700;}h1 { font-size: 1.8rem; line-height: 2rem; margin: 1.5rem 0; }h2 { font-size: 1.4rem; line-height: 2rem; margin: 1.5rem 0; }h3 { font-size: 1.2rem; line-height: 1.5rem; margin: 1.5rem 0; }h4, h5, h6 { font-size: 1rem; line-height: 1.5rem; margin: 1.5rem 0; }main { display: block;}.content-inner { padding: 1rem 2rem;}.content-inner.thin { padding: .5rem 1rem;}@media (max-width: 768px) { .content-inner { padding: 1rem; }}/* Override */.container { position: relative;}/* Parts:layouts */.l-header { background-color: #fff; margin-bottom: 1rem; padding: 1rem 0; text-align: center;}.l-footer { font-size: .8rem; padding: 1.5rem 0;}/* Parts:menu */.p-menu { position: absolute; right: 15px; top: 0;}/* Parts:terms */.p-terms { list-style: none;}.p-terms .terms-title { margin: 0;}.p-terms a { display: inline-block; padding: .25rem 0;}.p-terms.inline li { display: inline-block; font-size: .8rem;}.p-terms.inline li::after { content: ',';}.p-terms.inline li:last-child::after { content: '';}/* Parts:paging */.p-paging { margin-bottom: 1.5rem; text-align: center;}.p-paging a { display: inline-block; padding: 1rem 1.5rem; margin: 0 .5rem; background-color: #cfd8dc; color: #263238;}/* Parts:section */section { margin-bottom: 1.5rem;}section>header { font-size: .8rem; font-weight: 700; margin-bottom: .5rem; text-transform: uppercase;}section>header a { color: #333; text-decoration: underline;}section.article-footer { margin-bottom: 1rem;}section.article-footer>header { margin-bottom: 0;}/* Parts:share */.p-share { min-width: 100%; margin-bottom: 1.5rem;}.p-share .share-inner { display: table; table-layout: fixed; width: 100%; border-spacing: .25rem;}.p-share a { display: table-cell; text-align: center; font-weight: 700; font-size: .7rem; padding: .5rem 0; color: #fff; border-radius: 5px;}.p-share a.ht { background-color: #00a4de; border-bottom: 2px solid #0083b1; }.p-share a.fb { background-color: #3b5998; border-bottom: 2px solid #2f4779; }.p-share a.tw { background-color: #1da1f2; border-bottom: 2px solid #1780c1; }.p-share a.gp { background-color: #dd4b39; border-bottom: 2px solid #b03c2d; }.p-share a.ln { background-color: #00c300; border-bottom: 2px solid #009c00; }.p-share a.ht::before { content: 'Hatena'; }.p-share a.fb::before { content: 'Facebook'; }.p-share a.tw::before { content: 'Twitter'; }.p-share a.gp::before { content: 'Google+'; }.p-share a.ln::before { content: 'LINE'; }/* Parts:logo */.h-logo { font-family: 'Montserrat', sans-serif;}.p-logo { display: inline-block; text-transform: uppercase;}.p-logo a { display: inline-block; font-size: 1.4rem; line-height: 2rem; color: #000;}/* Parts:crumb */.p-crumb ol { list-style: none; margin-bottom: 1rem;}.p-crumb li { display: inline; margin-right: .25rem; font-size: .8rem; color: #607d8b;}.p-crumb li::after { content: '/'; margin-left: .25rem;}.p-crumb li:last-child::after { content: '';}/* Parts:facts */.p-facts { list-style: none; font-size: .8rem; margin-bottom: 1rem;}.p-facts li { display: inline-block; margin-right: .5rem; color: #90a4ae;}.p-facts li i { margin-right: .5rem; color: #cfd8dc;}/* Parts:article */article { background-color: #fff;}article .title { margin: 0; margin-bottom: .5rem; font-weight: 700;}article .title a { color: #000;}article .thumb { display: block; background-image: url(http://vintersnow.github.io/images/default.jpg); background-position: center; background-size: cover;}article .summary { margin-bottom: .5rem; max-height: 5rem; overflow: hidden;}article.single .thumb { height: 18rem; margin-bottom: 1rem;}@media (max-width: 768px) { article.single .thumb { height: 12rem; }}article.li { margin-bottom: 1rem;}article.li .thumb { height: 7.5rem; margin-bottom: .5rem;}article.li.sm { background-color: transparent; margin-bottom: .5rem;}article.li.sm>header { padding: .5rem 0;}article.li.sm .title { font-size: .8rem; line-height: 1rem; margin-bottom: .25rem;}article.li.sm .p-facts { font-size: .6rem; margin-bottom: 0;}article.li.sm .thumb { float: left; margin-right: .5rem; height: 3rem; width: 3rem;}.article-body h2 { padding: 1rem 0; border-bottom: 2px solid #eceff1;}.article-body h2:first-child { margin-top: 0; }.article-body h3 { color: #428bca;}.article-body h4 { border-left: solid .25rem #428bca; padding: 0 .5rem;}.article-body p { margin: 1.5rem 0; line-height: 1.5rem;}.article-body a { text-decoration: underline;}.article-body ul,.article-body ol { padding-left: 1.5rem;}.article-body code { display: inline-block; font-family: Menlo, consolas, monospace; font-size: .8rem; padding: 0 .5rem; line-height: 1.5rem;}.article-body pre { margin: 1.5rem 0; padding: 0; font-size: .8rem; border: none; border-radius: 0;}.article-body pre code { display: block; line-height: 1rem; padding: 1rem;}.article-body blockquote { margin: 1.5rem 0; padding: .5rem 0; font-size: .8rem; border-top: 1px solid #eceff1; border-bottom: 1px solid #eceff1; color: #607d8b;}.article-body blockquote p { margin: .5rem 0; line-height: 1rem;}.article-body strong { box-shadow: 0 -.5rem 0 0 #90caf9 inset;}.article-body em { font-style: normal; font-weight: 700; color: #03a9f4;}.article-body figure { margin: 1.5rem 0; }.article-body figure img { max-width: 100%; }.article-body figure.left,.article-body figure.right { width: 15rem; height: 12rem; margin-top: 0;}.article-body figure.left { float: left; margin-right: 1rem; }.article-body figure.right { float: right; margin-left: 1rem; }@media (max-width: 768px) { .article-body figure.left, .article-body figure.right { float: none; margin: 0; width: auto; height: auto; }}.article-body figcaption { padding: .5rem 0; font-size: .8rem; text-align: center;}.article-body figcaption a { color: #263238;}
+       body { font-family: Avenir , 'Open Sans' , 'Helvetica Neue' , Helvetica , Arial , Verdana , Roboto , '游ゴシック' , 'Yu Gothic' , '游ゴシック体' , 'YuGothic' , 'ヒラギノ角ゴ Pro W3' , 'Hiragino Kaku Gothic Pro' , 'Meiryo UI' , 'メイリオ' , Meiryo , 'ＭＳ Ｐゴシック' , 'MS PGothic' , sans-serif; } 
+      
+    </style>
+  </head>
+
+  <body>
+    
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88436028-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+    
+
+    <header class="l-header">
+      <div class="container">
+        <div class="p-logo">
+          <a href="http://vintersnow.github.io/" class="h-logo">vintersnow&#39;s page</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol>
+        <li><a href="http://vintersnow.github.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://vintersnow.github.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">Catch the Flag if You Can</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+
+  <a href="http://vintersnow.github.io/post/catch_the_flag_if_you_can/" class="thumb" style="background-image: url(http://vintersnow.github.io/images/geek/ctf.jpg);"></a>
+  <div class="content-inner">
+    <h1 class="title">Catch the Flag if You Can</h1>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-12-12T12:52:43JST">Dec 12, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://vintersnow.github.io/post/">post</a></li>
+      
+    </ul>
+
+    <div class="article-body">
+
+<h1 id="tl-dr">TL;DR</h1>
+
+<p>この記事は<a href="http://qiita.com/advent-calendar/2016/eeic2">eeic Adevent Calendar 2016 その２</a>の１１日目です。</p>
+
+<p>これはCTF歴数ヶ月のトーシロがCTFを知らない人に対して説明をする（ことを試みた）記事です。
+以下の構成となっています。</p>
+
+<ul>
+<li>第一部: <a href="http://vintersnow.github.io/post/catch_the_flag_if_you_can/">CTFについて</a></li>
+<li>第二部: <a href="http://vintersnow.github.io/post/catch_the_flag_if_you_can_binary/">はじめてのバイナリ解析</a></li>
+<li>第三部: <a href="http://vintersnow.github.io/post/catch_the_flag_if_you_can_seccon/">SECCON2016 write up</a></li>
+</ul>
+
+<p>この記事は第一部です。（長くなったので分割しました。）</p>
+
+<p>CTFとは&rdquo;Capture The Flag&rdquo;の略で、隠されたフラッグと呼ばれるものを何かしらの方法で習得するゲームです。</p>
+
+<p>IT技術を使った謎解き、プログラミング、ハッキングなどの言葉を聞いて興味を惹かれた人読んでみると良いかもしれません。<br />
+「ハッキングとか倫理に反する！」と思う方やウィザードの方はブラウザを閉じることをおすすめます。<br />
+また時間の無い方も踏み入れないほうがいいかもしれません&hellip; 気がつくと時間が解けていきます。</p>
+
+<p>&hellip;<br />
+..<br />
+.</p>
+
+<pre><code class="language-highlight">.......................................................................
+:::: ##:::::'##:'########:'##::::::::'######:::'#######::'##::::'##::::
+:::: ##:'##: ##: ##.....:: ##:::::::'##... ##:'##.... ##: ###::'###::::
+:::: ##: ##: ##: ##::::::: ##::::::: ##:::..:: ##:::: ##: ####'####::::
+:::: ##: ##: ##: ######::: ##::::::: ##::::::: ##:::: ##: ## ### ##::::
+:::: ##: ##: ##: ##...:::: ##::::::: ##::::::: ##:::: ##: ##. #: ##::::
+:::: ##: ##: ##: ##::::::: ##::::::: ##::: ##: ##:::: ##: ##:.:: ##::::
+::::. ###. ###:: ########: ########:. ######::. #######:: ##:::: ##::::
+:::::...::...:::........::........:::......::::.......:::..:::::..:::::
+:::: ########::'#######::::::::::::::::::::::::::::::::::::::::::::::::
+::::... ##..::'##.... ##:::::::::::::::::::::::::::::::::::::::::::::::
+::::::: ##:::: ##:::: ##:::::::::::::::::::::::::::::::::::::::::::::::
+::::::: ##:::: ##:::: ##:::::::::::::::::::::::::::::::::::::::::::::::
+::::::: ##:::: ##:::: ##:::::::::::::::::::::::::::::::::::::::::::::::
+::::::: ##:::: ##:::: ##:::::::::::::::::::::::::::::::::::::::::::::::
+::::::: ##::::. #######::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::..::::::.......:::::::::::::::::::::::::::::::::::::::::::::::::
+:::: ##::::'##:'##::: ##:'########::'########:'########::::::::::::::::
+:::: ##:::: ##: ###:: ##: ##.... ##: ##.....:: ##.... ##:::::::::::::::
+:::: ##:::: ##: ####: ##: ##:::: ##: ##::::::: ##:::: ##:::::::::::::::
+:::: ##:::: ##: ## ## ##: ##:::: ##: ######::: ########::'#######::::::
+:::: ##:::: ##: ##. ####: ##:::: ##: ##...:::: ##.. ##:::........::::::
+:::: ##:::: ##: ##:. ###: ##:::: ##: ##::::::: ##::. ##::::::::::::::::
+::::. #######:: ##::. ##: ########:: ########: ##:::. ##:::::::::::::::
+:::::.......:::..::::..::........:::........::..:::::..::::::::::::::::
+::::: ######::: ########:::'#######::'##::::'##:'##::: ##:'########::::
+:::: ##... ##:: ##.... ##:'##.... ##: ##:::: ##: ###:: ##: ##.... ##:::
+:::: ##:::..::: ##:::: ##: ##:::: ##: ##:::: ##: ####: ##: ##:::: ##:::
+:::: ##::'####: ########:: ##:::: ##: ##:::: ##: ## ## ##: ##:::: ##:::
+:::: ##::: ##:: ##.. ##::: ##:::: ##: ##:::: ##: ##. ####: ##:::: ##:::
+:::: ##::: ##:: ##::. ##:: ##:::: ##: ##:::: ##: ##:. ###: ##:::: ##:::
+::::. ######::: ##:::. ##:. #######::. #######:: ##::. ##: ########::::
+:::::......::::..:::::..:::.......::::.......:::..::::..::........:::::
+</code></pre>
+
+<h1 id="about-ctf">What is CTF?</h1>
+
+<p>すでに述べましたが、CTF(Capture The Flag)は隠されたフラッグを探し出すゲームです。
+CTFは様々な知識を必要とするので、 CTFを行うことでITの基盤技術全般が身につきます！</p>
+
+<p>出段範囲が広すぎて一概には言えないのですが、主に下記のような問題が出題されます。</p>
+
+<ul>
+<li>バイナリ解析</li>
+<li>ネットワーク通信</li>
+<li>Web</li>
+<li>暗号</li>
+<li>プログラミング</li>
+</ul>
+
+<p>そして以下のような知識が必要となります</p>
+
+<ul>
+<li>プログラミング</li>
+<li>データベース</li>
+<li>無線通信</li>
+<li>符号理論</li>
+<li>暗号理論</li>
+<li>OSなどの基本的な知識
+
+<ul>
+<li>システムコール</li>
+<li>ファイルシステム</li>
+<li>メモリダンプ</li>
+</ul></li>
+<li>雑学</li>
+<li>etc.</li>
+</ul>
+
+<p>とまあテストの出題範囲だったらブチ切れる広さをしています。
+基本的に調べながらやることになります。
+一問解くのに時間がかかりますが、とても勉強になります。</p>
+
+<p>イメージしやすくするためどのような問題がでるのか例を出しましょう</p>
+
+<blockquote>
+<p>Decode this!
+&ldquo;synt:guvf_vf_Pnrfne_pvcure&rdquo;</p>
+</blockquote>
+
+<p>問題文に&rdquo;復号せよ&rdquo;と書かれていて、暗号文らしいものが書かれています。<br />
+なんの暗号でしょうか？少し考えてください。</p>
+
+<p><br> <br> <br>
+<code>......</code><br />
+<code>.....</code><br />
+<code>....</code><br />
+<code>...</code><br />
+<code>.</code><br />
+<br> <br> <br></p>
+
+<p>わかりましたか？
+これはシーザー暗号もしくはrot13と呼ばれる単一換字式暗号です。アルファベットを13文字ずらしたものに置き換えている暗号です。
+復号してみましょう</p>
+
+<pre><code class="language-python">&quot;synt:guvf_vf_Pnrfne_pvcure&quot;.decode(&quot;rot13&quot;)
+# =&gt; u'flag:this_is_Caesar_cipher'
+</code></pre>
+
+<p>フラッグが手に入りましたね！</p>
+
+<p>実際はもっと難しいですが、大体これの延長線上です。たぶん&hellip;</p>
+
+<h1 id="ctfの始め方">CTFの始め方</h1>
+
+<h2 id="大会">大会</h2>
+
+<p>CTFは本来は大会です。チーム(ひとりでもok)で参加し、時間内（24時間や48時間）にどれだけのflagを取れるかを競います。
+有名なものではDEFCONやSECCONなどがあります。ちょうどこの土日にSECCON2016がありました。<br />
+大会といっても大抵オンラインで参加できるで、とりあえず応募して時間があったら問題見てみるというスタイルでいいと思います。</p>
+
+<p><a href="https://ctftime.org/">CTFTime</a>というサイトで開催予定の大会を知ることが出来ます。</p>
+
+<p>大会と違って常設のCTFというのもあります。これはいつでも自分の好きな時に試すことが出来ます。</p>
+
+<ul>
+<li><a href="http://ksnctf.sweetduet.info/">ksnctf</a></li>
+<li><a href="http://overthewire.org/wargames/">OverTheWiro</a></li>
+</ul>
+
+<p>自分はksnctfしかしたことないのですが日本のサイトですしおすすめです。
+OverTheWiroは試したことないのですが初心者向けらしいので試してみたいですね。</p>
+
+<p>CTFでは問題を解くとwrite upと言ってどのように解いたのか書く習慣があります。解けた問題も解けなかった問題も他人のwrite upを読むのは勉強になるので大会後はwrite upを探すと良いです。</p>
+
+<h2 id="参考書">参考書</h2>
+
+<p>ネットで調べてるだけでも問題ないのですが、さすがに基礎知識がないとそもそも取っ掛かりすら分からなかったりするので、
+自分は<a href="https://www.amazon.co.jp/dp/4839956480/ref=sr_1_1?ie=UTF8&amp;qid=1481523754&amp;sr=8-1">セキュリティコンテストチャレンジブック</a>という本で勉強中です。CTF初心者向けの本です。</p>
+
+<p>他に、「秘密の国のアリス」や「Hacking: 美しき策謀」も良い本らしいです。</p>
+
+<h2 id="まとめ">まとめ</h2>
+
+<ul>
+<li>CTFは勉強になるのでおすすめ。</li>
+<li>とりあえずいっぺん試してみよう。</li>
+<li>CTF仲間募集しています。</li>
+</ul>
+</div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="content-inner">
+
+      <aside class="p-share">
+  <div class="share-inner">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http%3a%2f%2fvintersnow.github.io%2fpost%2fcatch_the_flag_if_you_can%2f&title=Catch%20the%20Flag%20if%20You%20Can" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow"></a>
+    <a href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fvintersnow.github.io%2fpost%2fcatch_the_flag_if_you_can%2f&t=Catch%20the%20Flag%20if%20You%20Can" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"></a>
+    <a href="http://twitter.com/intent/tweet?url=http%3a%2f%2fvintersnow.github.io%2fpost%2fcatch_the_flag_if_you_can%2f&text=Catch%20the%20Flag%20if%20You%20Can&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"></a>
+    <a href="https://plus.google.com/share?url=http%3a%2f%2fvintersnow.github.io%2fpost%2fcatch_the_flag_if_you_can%2f" title="Google Plusでシェア" class="gp" target="_blank" rel="nofollow"></a>
+    <a href="http://line.me/R/msg/text/?Catch%20the%20Flag%20if%20You%20Can http%3a%2f%2fvintersnow.github.io%2fpost%2fcatch_the_flag_if_you_can%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"></a>
+  </div>
+</aside>
+
+
+      <nav class="p-crumb">
+        <ol>
+          <li><a href="http://vintersnow.github.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+          
+          <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://vintersnow.github.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+          
+          <li class="active">Catch the Flag if You Can</li>
+        </ol>
+      </nav>
+
+      
+      
+      
+      
+      
+      <section class="article-footer">
+        <header>
+          <a href="http://vintersnow.github.io/tags/">TAGS</a>
+        </header>
+        <div>
+          <ul class="p-terms inline">
+            
+            <li><a href="http://vintersnow.github.io/tags/it/">IT</a></li>
+            
+            <li><a href="http://vintersnow.github.io/tags/ctf/">CTF</a></li>
+            
+          </ul>
+        </div>
+      </section>
+      
+      
+    </div>
+  </footer>
+
+</article>
+
+
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'http-vintersnow-github-io';
+    var disqus_identifier = 'http:\/\/vintersnow.github.io\/post\/catch_the_flag_if_you_can\/';
+    var disqus_title = 'Catch the Flag if You Can';
+    var disqus_url = 'http:\/\/vintersnow.github.io\/post\/catch_the_flag_if_you_can\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+
+  <div class="col-md-4">
+    <aside class="site">
+
+  <section>
+    <header>latests</header>
+    <div>
+      <div class="row">
+        
+        <div class="col-md-12 col-sm-6 col-xs-12"><article class="li sm">
+  <a href="http://vintersnow.github.io/post/aws_education/" class="thumb" style="background-image: url(http://vintersnow.github.io/static/images/post/aws-educate-formazione.png);"></a>
+  <header>
+    <div class="title"><a href="http://vintersnow.github.io/post/aws_education/">AWS educationに登録した</a></div>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-01-20T18:41:07JST">Jan 20, 2017</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://vintersnow.github.io/post/">post</a></li>
+    </ul>
+  </header>
+</article>
+</div>
+        
+        
+        <div class="col-md-12 col-sm-6 col-xs-12"><article class="li sm">
+  <a href="http://vintersnow.github.io/ctf/ksnctf_digest_is_secure/" class="thumb" style="background-image: url(http://vintersnow.github.io/images/geek/ctf.jpg);"></a>
+  <header>
+    <div class="title"><a href="http://vintersnow.github.io/ctf/ksnctf_digest_is_secure/">ksnctf: #9 digest is secure!</a></div>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-12-30T23:35:12JST">Dec 30, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://vintersnow.github.io/ctf/">ctf</a></li>
+    </ul>
+  </header>
+</article>
+</div>
+        <div class="col-sm-12"></div>
+        
+        <div class="col-md-12 col-sm-6 col-xs-12"><article class="li sm">
+  <a href="http://vintersnow.github.io/ctf/ksnctf_math2/" class="thumb" style="background-image: url(http://vintersnow.github.io/images/geek/ctf.jpg);"></a>
+  <header>
+    <div class="title"><a href="http://vintersnow.github.io/ctf/ksnctf_math2/">ksnctf: #17 math2</a></div>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-12-29T20:56:45JST">Dec 29, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://vintersnow.github.io/ctf/">ctf</a></li>
+    </ul>
+  </header>
+</article>
+</div>
+        
+        
+        <div class="col-md-12 col-sm-6 col-xs-12"><article class="li sm">
+  <a href="http://vintersnow.github.io/ctf/ksnctf_math1/" class="thumb" style="background-image: url(http://vintersnow.github.io/images/geek/ctf.jpg);"></a>
+  <header>
+    <div class="title"><a href="http://vintersnow.github.io/ctf/ksnctf_math1/">ksnctf_math1</a></div>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-12-29T20:35:21JST">Dec 29, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://vintersnow.github.io/ctf/">ctf</a></li>
+    </ul>
+  </header>
+</article>
+</div>
+        <div class="col-sm-12"></div>
+        
+        <div class="col-md-12 col-sm-6 col-xs-12"><article class="li sm">
+  <a href="http://vintersnow.github.io/ctf/ksnctf_proverb/" class="thumb" style="background-image: url(http://vintersnow.github.io/images/geek/ctf.jpg);"></a>
+  <header>
+    <div class="title"><a href="http://vintersnow.github.io/ctf/ksnctf_proverb/">ksnctf: #13 proverb</a></div>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-12-29T19:42:07JST">Dec 29, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://vintersnow.github.io/ctf/">ctf</a></li>
+    </ul>
+  </header>
+</article>
+</div>
+        
+        
+        <div class="col-md-12 col-sm-6 col-xs-12"><article class="li sm">
+  <a href="http://vintersnow.github.io/ctf/ksnctf_john/" class="thumb" style="background-image: url(http://vintersnow.github.io/images/geek/ctf.jpg);"></a>
+  <header>
+    <div class="title"><a href="http://vintersnow.github.io/ctf/ksnctf_john/">ksnctf: #14 john</a></div>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-12-29T18:38:01JST">Dec 29, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://vintersnow.github.io/ctf/">ctf</a></li>
+    </ul>
+  </header>
+</article>
+</div>
+        <div class="col-sm-12"></div>
+        
+        <div class="col-md-12 col-sm-6 col-xs-12"><article class="li sm">
+  <a href="http://vintersnow.github.io/ctf/ksnctf_reserved/" class="thumb" style="background-image: url(http://vintersnow.github.io/images/geek/ctf.jpg);"></a>
+  <header>
+    <div class="title"><a href="http://vintersnow.github.io/ctf/ksnctf_reserved/">ksnctf: #25 reserved</a></div>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-12-29T15:48:37JST">Dec 29, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://vintersnow.github.io/ctf/">ctf</a></li>
+    </ul>
+  </header>
+</article>
+</div>
+        
+        
+        <div class="col-md-12 col-sm-6 col-xs-12"><article class="li sm">
+  <a href="http://vintersnow.github.io/ctf/ksnctf_basic_is_secure/" class="thumb" style="background-image: url(http://vintersnow.github.io/images/geek/ctf.jpg);"></a>
+  <header>
+    <div class="title"><a href="http://vintersnow.github.io/ctf/ksnctf_basic_is_secure/">ksnctf: #8 basic is secure?</a></div>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-12-27T21:55:08JST">Dec 27, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://vintersnow.github.io/ctf/">ctf</a></li>
+    </ul>
+  </header>
+</article>
+</div>
+        <div class="col-sm-12"></div>
+        
+        <div class="col-md-12 col-sm-6 col-xs-12"><article class="li sm">
+  <a href="http://vintersnow.github.io/ctf/ksnctf_shebang/" class="thumb" style="background-image: url(http://vintersnow.github.io/images/geek/ctf.jpg);"></a>
+  <header>
+    <div class="title"><a href="http://vintersnow.github.io/ctf/ksnctf_shebang/">ksnctf #10 #!</a></div>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-12-27T21:45:46JST">Dec 27, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://vintersnow.github.io/ctf/">ctf</a></li>
+    </ul>
+  </header>
+</article>
+</div>
+        
+        
+        <div class="col-md-12 col-sm-6 col-xs-12"><article class="li sm">
+  <a href="http://vintersnow.github.io/ctf/ksnctf_programing/" class="thumb" style="background-image: url(http://vintersnow.github.io/images/geek/ctf.jpg);"></a>
+  <header>
+    <div class="title"><a href="http://vintersnow.github.io/ctf/ksnctf_programing/">ksnctf: #7 programing</a></div>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-12-27T12:27:36JST">Dec 27, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://vintersnow.github.io/ctf/">ctf</a></li>
+    </ul>
+  </header>
+</article>
+</div>
+        <div class="col-sm-12"></div>
+        
+      </div>
+    </div>
+  </section>
+
+  
+  <section>
+    <header>category</header>
+    <div>
+      <ul class="p-terms">
+        
+      </ul>
+    </div>
+  </section>
+  
+  <section>
+    <header>tag</header>
+    <div>
+      <ul class="p-terms">
+        <li><a href="http://vintersnow.github.io/tags/it">it</a></li><li><a href="http://vintersnow.github.io/tags/ctf">ctf</a></li><li><a href="http://vintersnow.github.io/tags/ksnctf">ksnctf</a></li><li><a href="http://vintersnow.github.io/tags/aws">aws</a></li><li><a href="http://vintersnow.github.io/tags/game">game</a></li><li><a href="http://vintersnow.github.io/tags/student">student</a></li>
+      </ul>
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; vintersnow&#39;s page</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_robust">Robust</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

